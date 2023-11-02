@@ -2,7 +2,7 @@ export const environment = {
   //COLOCAR EN FALSE LOCAL
   production: false,
   //DESCOMENTAR LOCAL
-  URL_BACKEND: 'http://localhost:8080/corhuila-0.0.1-SNAPSHOT',
+  URL_BACKEND: 'http://localhost:8080/siiac-1.0',
   //DESCOMENTAR PRODUCCIÓN
   //URL_BACKEND : "https://gaitana.usco.edu.co/carnet_digital",
   //URL_BACKEND : "https://feisty-legend-403214.wl.r.appspot.com",

@@ -64,7 +64,7 @@ export class LoginComponent {
         Swal.fire({
           icon: 'success',
           title: 'Inicio de sesión exitoso.',
-          confirmButtonColor: '#006983',
+          confirmButtonColor: '#8f141b',
           confirmButtonText: 'Listo',
         });
 
