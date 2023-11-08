@@ -14,13 +14,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { FiltroSexoBiologicoPipe } from './pipes/filtro-sexo-biologico.pipe';
+import { FiltroEstratoPipe } from './pipes/filtro-estrato.pipe';
+import { FiltroMunicipioPipe } from './pipes/filtro-municipio.pipe';
+import {
+  PersonaComponent,
+  ModalFormularioPersona,
+} from './components/persona/persona.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     InicioComponent,
-    NavbarComponent
+    NavbarComponent,
+    FiltroSexoBiologicoPipe,
+    FiltroEstratoPipe,
+    FiltroMunicipioPipe,
+    PersonaComponent,
+    ModalFormularioPersona,
   ],
   imports: [
     BrowserModule,
@@ -29,9 +41,10 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModules
+    MaterialModules,
   ],
-  providers: [DatePipe, {provide: MAT_DATE_LOCALE, useValue: 'es-ES'}],
-  bootstrap: [AppComponent]
+  entryComponents: [ModalFormularioPersona],
+  providers: [DatePipe, { provide: MAT_DATE_LOCALE, useValue: 'es-ES' }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
