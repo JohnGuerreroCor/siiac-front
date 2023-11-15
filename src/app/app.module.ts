@@ -21,6 +21,11 @@ import {
   PersonaComponent,
   ModalFormularioPersona,
 } from './components/persona/persona.component';
+import {
+  InstitucionComponent,
+  ModalFormularioInstitucion,
+  ModalVistaInstitucion,
+} from './components/institucion/institucion.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +38,9 @@ import {
     FiltroMunicipioPipe,
     PersonaComponent,
     ModalFormularioPersona,
+    ModalFormularioInstitucion,
+    ModalVistaInstitucion,
+    InstitucionComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +51,11 @@ import {
     ReactiveFormsModule,
     MaterialModules,
   ],
-  entryComponents: [ModalFormularioPersona],
+  entryComponents: [
+    ModalFormularioPersona,
+    ModalFormularioInstitucion,
+    ModalVistaInstitucion,
+  ],
   providers: [DatePipe, { provide: MAT_DATE_LOCALE, useValue: 'es-ES' }],
   bootstrap: [AppComponent],
 })

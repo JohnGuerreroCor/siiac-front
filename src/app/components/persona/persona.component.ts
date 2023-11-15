@@ -194,7 +194,6 @@ export class PersonaComponent {
 
   obtenerPersonas() {
     this.personaService.obtenerPersonas().subscribe((data) => {
-      console.log(data);
       this.listadoPersona = data;
       this.dataSource = new MatTableDataSource<Persona>(data);
       this.paginator.firstPage();
@@ -302,9 +301,6 @@ export class ModalFormularioPersona {
       this.obtenerMunicipios();
       if (JSON.stringify(data) !== 'null') {
         this.editarPersona(data.sede);
-        console.log('Entra');
-      } else {
-        console.log('No entra');
       }
     }
   }
@@ -627,7 +623,6 @@ export class ModalFormularioPersona {
 
   obtenerPersonas() {
     this.personaService.obtenerPersonas().subscribe((data) => {
-      console.log(data);
       this.listadoPersona = data;
     });
   }
