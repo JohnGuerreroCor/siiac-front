@@ -26,6 +26,12 @@ import {
   ModalFormularioInstitucion,
   ModalVistaInstitucion,
 } from './components/institucion/institucion.component';
+import {
+  SedeComponent,
+  ModalFormularioSede,
+} from './components/sede/sede.component';
+import { FacultadComponent } from './components/facultad/facultad.component';
+import { ProgramaComponent } from './components/programa/programa.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +46,11 @@ import {
     ModalFormularioPersona,
     ModalFormularioInstitucion,
     ModalVistaInstitucion,
+    ModalFormularioSede,
     InstitucionComponent,
+    SedeComponent,
+    FacultadComponent,
+    ProgramaComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +65,7 @@ import {
     ModalFormularioPersona,
     ModalFormularioInstitucion,
     ModalVistaInstitucion,
+    ModalFormularioSede,
   ],
   providers: [DatePipe, { provide: MAT_DATE_LOCALE, useValue: 'es-ES' }],
   bootstrap: [AppComponent],

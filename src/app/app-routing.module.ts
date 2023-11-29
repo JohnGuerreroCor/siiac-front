@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { PersonaComponent } from './components/persona/persona.component';
 import { InstitucionComponent } from './components/institucion/institucion.component';
+import { SedeComponent } from './components/sede/sede.component';
 
 const routes: Routes = [
   //COMPONENTES DEL SISTEMA
@@ -14,6 +15,8 @@ const routes: Routes = [
   { path: 'institucion', component: InstitucionComponent },
 
   { path: 'persona', component: PersonaComponent },
+
+  { path: 'sede', component: SedeComponent },
 
   //REDIRECCIONAMIENTO COMOPONENTE POR DEFECTO PARA RUTAS INEXISTENTES EN EL NAVEGADOR
   { path: '', pathMatch: 'full', redirectTo: '/login' },
