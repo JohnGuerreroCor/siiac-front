@@ -138,7 +138,7 @@ h6 {
 }
 
 .btn-usco-vt:disabled {
-  background-color: #4D626C;
+  background-color: #4d626c;
   color: #edeff0;
 }
 
@@ -267,15 +267,11 @@ h6 {
 /* ----- AJUSTE DISEÑO TABS MATERIAL */
 .mat-mdc-tab,
 .mat-mdc-tab-link {
-  background-color: #4D626C;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
-  font-size: 12px !important;
+  background-color: #5c0e12;
 }
 .mat-mdc-tab .mdc-tab__text-label,
 .mat-mdc-tab-link .mdc-tab__text-label {
   color: rgb(229, 229, 229);
-  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
-  font-size: 12px !important;
 }
 
 .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label,
@@ -283,21 +279,20 @@ h6 {
   .mdc-tab__text-label {
   color: #ffffff;
   font-weight: bold;
-  font-family: "Poppins", sans-serif;
-  font-size: 12px !important;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
 }
 
 /* ----- AJUSTE DISEÑO TABLA MATERIAL */
 .mat-mdc-table .mat-mdc-header-cell {
-  background: #4D626C !important;
+  background: #4d626c !important;
   color: #ffffff !important;
   font-weight: bold !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
   font-size: 12px !important;
 }
 
 .mat-mdc-table .mdc-data-table__row {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
   font-size: 12px !important;
 }
 
@@ -355,12 +350,12 @@ legend.scheduler-border {
   --mdc-radio-unselected-hover-icon-color: #212121;
   --mdc-radio-unselected-icon-color: rgba(0, 0, 0, 0.54);
   --mdc-radio-unselected-pressed-icon-color: rgba(0, 0, 0, 0.54);
-  --mdc-radio-selected-focus-icon-color: #006983;
-  --mdc-radio-selected-hover-icon-color: #006983;
-  --mdc-radio-selected-icon-color: #006983;
-  --mdc-radio-selected-pressed-icon-color: #006983;
+  --mdc-radio-selected-focus-icon-color: #8f141b;
+  --mdc-radio-selected-hover-icon-color: #8f141b;
+  --mdc-radio-selected-icon-color: #8f141b;
+  --mdc-radio-selected-pressed-icon-color: #8f141b;
   --mat-mdc-radio-ripple-color: #000;
-  --mat-mdc-radio-checked-ripple-color: #006983;
+  --mat-mdc-radio-checked-ripple-color: #8f141b;
 }
 
 /*----------------------------------------*/
@@ -370,22 +365,22 @@ legend.scheduler-border {
 }
 .font-corh-gr {
   color: #4e6470;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
 }
 
 .font-usco-bl {
   color: #1e262b;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
 }
 
 .font-usco-vt {
   color: #8f141b;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
 }
 
 .font-usco-dr {
   color: #dfd4a6;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
 }
 
 .hr-usco-vt {
@@ -398,7 +393,7 @@ legend.scheduler-border {
 }
 
 .font-usco {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
 }
 
 #carnet-usco-rotulo-front {
