@@ -80,6 +80,9 @@ import { FiltroModalidadPipe } from './pipes/filtro-modalidad.pipe';
 import { FiltroAreaConocimientoPipe } from './pipes/filtro-area-conocimiento.pipe';
 import { FiltroSedePipe } from './pipes/filtro-sede.pipe';
 import { CuerposColegiadosComponent } from './components/cuerpos-colegiados/cuerpos-colegiados.component';
+import { TokenComponent } from './components/token/token.component';
+import { EmailHidePipe } from './pipes/email-hide.pipe';
+
 
 @NgModule({
   declarations: [
@@ -133,6 +136,8 @@ import { CuerposColegiadosComponent } from './components/cuerpos-colegiados/cuer
     FiltroAreaConocimientoPipe,
     FiltroSedePipe,
     CuerposColegiadosComponent,
+    TokenComponent,
+    EmailHidePipe,
   ],
   imports: [
     BrowserModule,

@@ -11,10 +11,12 @@ import { NormaGrupoComponent } from './components/marco-normativo/norma-grupo/no
 import { ProgramaComponent } from './components/programa/programa.component';
 import { CineComponent } from './components/cine/cine.component';
 import { CuerposColegiadosComponent } from './components/cuerpos-colegiados/cuerpos-colegiados.component';
+import { TokenComponent } from './components/token/token.component';
 
 const routes: Routes = [
   //COMPONENTES DEL SISTEMA
   { path: 'login', component: LoginComponent },
+  { path: 'token', component: TokenComponent },
 
   { path: 'inicio', component: InicioComponent },
 

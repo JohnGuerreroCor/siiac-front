@@ -34,6 +34,29 @@ export class LoginComponent {
 
   ngOnInit() {
     this.crearFormularioLogin();
+    if (this.authService.isAuthenticated()) {
+      if (this.authService.codigoverificacion != null) {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+          },
+        });
+
+        Toast.fire({
+          icon: 'info',
+          title: 'Ya se ha iniciado sesión.',
+        });
+        this.router.navigate(['encuesta-seguimiento']);
+      } else {
+        this.router.navigate(['token']);
+      }
+    }
   }
 
   private crearFormularioLogin(): void {
@@ -60,15 +83,24 @@ export class LoginComponent {
         this.authService.guardarUsuario(response.access_token);
         this.authService.guardarToken(response.access_token);
 
-        // Mostrar mensaje de éxito y redirigir
-        Swal.fire({
-          icon: 'success',
-          title: 'Inicio de sesión exitoso.',
-          confirmButtonColor: '#8f141b',
-          confirmButtonText: 'Listo',
+         // Mostrar mensaje de éxito y redirigir
+         const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+          },
         });
 
-        this.router.navigate(['/inicio']);
+        Toast.fire({
+          icon: 'success',
+          title: 'Inicio de sesión exitoso.',
+        });
+        this.router.navigate(['/token']);
       },
       (err) => this.fError(err)
     );
