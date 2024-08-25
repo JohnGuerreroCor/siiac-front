@@ -89,6 +89,8 @@ import { FlatpickrModule } from 'angularx-flatpickr';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import { LOCALE_ID } from '@angular/core';
+import {NgxPrintModule} from 'ngx-print';
+
 
 // Importa el idioma español de date-fns
 import { es } from 'date-fns/locale';
@@ -163,6 +165,7 @@ registerLocaleData(localeEs);
     FormsModule,
     ReactiveFormsModule,
     MaterialModules,
+    NgxPrintModule,
     FlatpickrModule.forRoot(),
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: () => adapterFactory() }),
   ],

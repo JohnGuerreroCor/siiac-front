@@ -21,7 +21,7 @@ export class InstitucionPdfService {
 
   hedaerBase64() {
     // Ruta de la imagen en "assets"
-    const imagePath = 'assets/header.jpg';
+    const imagePath = 'assets/header-coworking.jpg';
 
     // Realiza una solicitud HTTP GET para cargar la imagen como un blob
     this.http.get(imagePath, { responseType: 'blob' }).subscribe((blob) => {
@@ -41,7 +41,7 @@ export class InstitucionPdfService {
 
   footerBase64() {
     // Ruta de la imagen en "assets"
-    const imagePath = 'assets/footer.jpg';
+    const imagePath = 'assets/footer-coworking.jpg';
 
     // Realiza una solicitud HTTP GET para cargar la imagen como un blob
     this.http.get(imagePath, { responseType: 'blob' }).subscribe((blob) => {
@@ -127,7 +127,7 @@ export class InstitucionPdfService {
                 {
                   border: [false, false, false, false],
                   text: 'Fecha de impresión:  ' + date,
-                  fillColor: '#DDB8BA',
+                  fillColor: '#8996a4',
                   bold: true,
                   alignment: 'left',
                 },
@@ -135,7 +135,7 @@ export class InstitucionPdfService {
                   border: [false, false, false, false],
                   text:
                     'Pagina: ' + currentPage.toString() + ' de ' + pageCount,
-                  fillColor: '#DDB8BA',
+                  fillColor: '#8996a4',
                   bold: true,
                   alignment: 'right',
                 },

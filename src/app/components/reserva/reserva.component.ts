@@ -100,8 +100,8 @@ export class ReservaComponent {
 
   events: CalendarEvent[] = [
     {
-      start: setMinutes(setHours(new Date(), 21), 0), // 9:00 PM 0074d9
-      end: setMinutes(setHours(new Date(), 23), 0), // 11:00 PM FFF5E1
+      start: setMinutes(setHours(new Date(), 9), 0), // 9:00 PM 0074d9
+      end: setMinutes(setHours(new Date(), 11), 0), // 11:00 PM FFF5E1
       title: 'Sala uno',
       color: { primary: '#0074d9', secondary: '#0074d9' },
       actions: this.actions,
@@ -112,9 +112,9 @@ export class ReservaComponent {
       draggable: true,
     },
     {
-      start: setMinutes(setHours(new Date(), 23), 0), // 9:00 PM 0074d9
-      end: setMinutes(setHours(new Date(), 24), 0), // 11:00 PM FFF5E1
-      title: 'Sala uno',
+      start: setMinutes(setHours(new Date(), 14), 0), // 9:00 PM 0074d9
+      end: setMinutes(setHours(new Date(), 16), 0), // 11:00 PM FFF5E1
+      title: 'Sala dos',
       color: { primary: '#009640', secondary: '#009640' },
       actions: this.actions,
       resizable: {

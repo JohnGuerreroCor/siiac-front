@@ -234,6 +234,20 @@ h6 {
   color: #009640;
 }
 
+@media print {
+  /* .table {
+    border: solid 2px black;
+  }
+  .tables thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #000;
+  } */
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+}
+
 /*FUENTES PRINCIPALES COLORES*/
 
 .font-corhuila-p-as-1 {
