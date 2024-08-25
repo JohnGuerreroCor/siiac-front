@@ -12,6 +12,7 @@ import { ProgramaComponent } from './components/programa/programa.component';
 import { CineComponent } from './components/cine/cine.component';
 import { CuerposColegiadosComponent } from './components/cuerpos-colegiados/cuerpos-colegiados.component';
 import { TokenComponent } from './components/token/token.component';
+import { ReservaComponent } from './components/reserva/reserva.component';
 
 const routes: Routes = [
   //COMPONENTES DEL SISTEMA
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'norma-grupo', component: NormaGrupoComponent },
   { path: 'programa', component: ProgramaComponent },
   { path: 'cine', component: CineComponent },
+  { path: 'reserva', component: ReservaComponent },
 
   //REDIRECCIONAMIENTO COMOPONENTE POR DEFECTO PARA RUTAS INEXISTENTES EN EL NAVEGADOR
   { path: '', pathMatch: 'full', redirectTo: '/login' },

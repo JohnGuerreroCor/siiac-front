@@ -1,0 +1,131 @@
+<app-navbar>
+  <div class="text-center">
+    <div class="card mt-5">
+      <div
+        class="card-header text-center ml-4 mr-4 cursor-select"
+        [routerLink]="['/inicio']"
+        routerLinkActive="router-link-active"
+      >
+        <h4 class="mt-1">Gestión de reservas</h4>
+      </div>
+      <div class="card-body">
+        <div class="row text-right">
+          <div class="col">
+            <button class="btn btn-usco-vt" (click)="registrarFormulario()">
+              <i class="fa-solid fa-plus"></i> Registrar
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <fieldset class="scheduler-border shadow-sm">
+              <legend class="scheduler-border">Reservas</legend>
+              AQUÍ VA LA TABLA DE RESERVA POR USUARIO
+            </fieldset>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <fieldset class="scheduler-border shadow-sm">
+              <legend class="scheduler-border">Calendario</legend>
+              <div class="row text-center mt-4">
+                <div class="col-md-4">
+                  <div class="btn-group">
+                    <div
+                      class="btn btn-dark"
+                      mwlCalendarPreviousView
+                      [view]="view"
+                      [(viewDate)]="viewDate"
+                      (viewDateChange)="closeOpenMonthViewDay()"
+                    >
+                      Anterior
+                    </div>
+                    <div
+                      class="btn btn-outline-dark"
+                      mwlCalendarToday
+                      [(viewDate)]="viewDate"
+                    >
+                      Hoy
+                    </div>
+                    <div
+                      class="btn btn-dark"
+                      mwlCalendarNextView
+                      [view]="view"
+                      [(viewDate)]="viewDate"
+                      (viewDateChange)="closeOpenMonthViewDay()"
+                    >
+                      Próximo
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h3>
+                    {{ viewDate | calendarDate : view + "ViewTitle" : "es" }}
+                  </h3>
+                </div>
+                <div class="col-md-4">
+                  <div class="btn-group">
+                    <div
+                      class="btn btn-dark"
+                      (click)="setView(CalendarView.Month)"
+                      [class.active]="view === CalendarView.Month"
+                    >
+                      Mes
+                    </div>
+                    <div
+                      class="btn btn-dark"
+                      (click)="setView(CalendarView.Week)"
+                      [class.active]="view === CalendarView.Week"
+                    >
+                      Semana
+                    </div>
+                    <div
+                      class="btn btn-dark"
+                      (click)="setView(CalendarView.Day)"
+                      [class.active]="view === CalendarView.Day"
+                    >
+                      Día
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div [ngSwitch]="view">
+                <mwl-calendar-month-view
+                  *ngSwitchCase="CalendarView.Month"
+                  [viewDate]="viewDate"
+                  [events]="events"
+                  [refresh]="refresh"
+                  [activeDayIsOpen]="activeDayIsOpen"
+                  (dayClicked)="dayClicked($event.day)"
+                  [locale]="locale"
+                  (eventTimesChanged)="eventTimesChanged($event)"
+                >
+                </mwl-calendar-month-view>
+                <mwl-calendar-week-view
+                  *ngSwitchCase="CalendarView.Week"
+                  [viewDate]="viewDate"
+                  [events]="events"
+                  [refresh]="refresh"
+                  [locale]="locale"
+                  (eventTimesChanged)="eventTimesChanged($event)"
+                >
+                </mwl-calendar-week-view>
+                <mwl-calendar-day-view
+                  *ngSwitchCase="CalendarView.Day"
+                  [viewDate]="viewDate"
+                  [events]="events"
+                  [locale]="locale"
+                  [refresh]="refresh"
+                  (eventTimesChanged)="eventTimesChanged($event)"
+                >
+                </mwl-calendar-day-view>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+  </div>
+</app-navbar>

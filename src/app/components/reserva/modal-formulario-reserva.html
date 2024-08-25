@@ -1,0 +1,146 @@
+<h2
+  mat-dialog-title
+  class="font-corhuila text-white"
+  style="background-color: #4d626c"
+>
+  <i class="fa-solid fa-circle-info"></i> Formulario sede
+</h2>
+<mat-dialog-content>
+  <div class="row pl-4 pr-4 mt-2 text-left">
+    <div class="col">
+      <form [formGroup]="formSede">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label>Asunto<span class="requerido">*</span></label>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <input matInput type="text" formControlName="nombre" required />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label>Tipo de sala<span class="requerido">*</span></label>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-select class="font-sm-corhuila" formControlName="tipo">
+                  <mat-option class="font-sm-corhuila" value="tipoSede.codigo">
+                    tipoSede.nombre</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label>Cantida de personas<span class="requerido">*</span></label>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <input
+                  matInput
+                  type="number"
+                  min="1"
+                  formControlName="nombre"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label>Fecha<span class="requerido">*</span></label>
+              <input
+                type="date"
+                id="date-start"
+                name="date-start"
+                class="form-control"
+                dateFormat="Y-m-dTH:i"
+                altFormat="F j, Y H:i"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label>Hora de inicio<span class="requerido">*</span></label>
+              <input
+                type="time"
+                id="date-end"
+                name="date-end"
+                class="form-control"
+                dateFormat="Y-m-dTH:i"
+                altFormat="F j, Y H:i"
+                placeholder="Not set"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label>Hora de fin<span class="requerido">*</span></label>
+              <input
+                type="time"
+                id="date-end"
+                name="date-end"
+                class="form-control"
+                dateFormat="Y-m-dTH:i"
+                altFormat="F j, Y H:i"
+                placeholder="Not set"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label>Sala<span class="requerido">*</span></label>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-select class="font-sm-corhuila" formControlName="tipo">
+                  <mat-option class="font-sm-corhuila" value="tipoSede.codigo">
+                    tipoSede.nombre</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <label>Equipamiento<span class="requerido">*</span></label>
+            <ul>
+              <li>item</li>
+              <li>item</li>
+              <li>item</li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label>Observaciones<span class="requerido">*</span></label>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <textarea
+                  matInput
+                  class="font-sm-corhuila"
+                  type="text"
+                  rows="3"
+                  formControlName="observacion"
+                ></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</mat-dialog-content>
+<hr />
+<mat-dialog-actions align="end">
+  <button class="btn btn-warning" mat-dialog-close (click)="cancelar()">
+    <i class="fa-solid fa-xmark"></i> Cancelar
+  </button>
+  <button
+    type="button"
+    class="btn btn-success ml-2"
+    [disabled]="!formSede.valid"
+    (click)="generarSede()"
+  >
+    <i class="far fa-save"></i> Guardar
+  </button>
+</mat-dialog-actions>

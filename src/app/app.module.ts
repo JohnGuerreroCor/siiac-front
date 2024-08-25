@@ -82,6 +82,20 @@ import { FiltroSedePipe } from './pipes/filtro-sede.pipe';
 import { CuerposColegiadosComponent } from './components/cuerpos-colegiados/cuerpos-colegiados.component';
 import { TokenComponent } from './components/token/token.component';
 import { EmailHidePipe } from './pipes/email-hide.pipe';
+import { ReservaComponent, ModalFormularioReserva } from './components/reserva/reserva.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { FlatpickrModule } from 'angularx-flatpickr';
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+import { LOCALE_ID } from '@angular/core';
+
+// Importa el idioma español de date-fns
+import { es } from 'date-fns/locale';
+
+// Registra el idioma español para Angular
+registerLocaleData(localeEs);
+
 
 
 @NgModule({
@@ -109,6 +123,7 @@ import { EmailHidePipe } from './pipes/email-hide.pipe';
     ModalFormularioPrograma,
     ModalVistaPrograma,
     ModalFormularioFacultad,
+    ModalFormularioReserva,
     InstitucionComponent,
     SedeComponent,
     FacultadComponent,
@@ -138,6 +153,7 @@ import { EmailHidePipe } from './pipes/email-hide.pipe';
     CuerposColegiadosComponent,
     TokenComponent,
     EmailHidePipe,
+    ReservaComponent,
   ],
   imports: [
     BrowserModule,
@@ -147,6 +163,8 @@ import { EmailHidePipe } from './pipes/email-hide.pipe';
     FormsModule,
     ReactiveFormsModule,
     MaterialModules,
+    FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: () => adapterFactory() }),
   ],
   entryComponents: [
     ModalFormularioPersona,
@@ -164,8 +182,9 @@ import { EmailHidePipe } from './pipes/email-hide.pipe';
     ModalFormularioPrograma,
     ModalVistaPrograma,
     ModalFormularioFacultad,
+    ModalFormularioReserva
   ],
-  providers: [DatePipe, { provide: MAT_DATE_LOCALE, useValue: 'es-ES' }],
+  providers: [DatePipe, { provide: MAT_DATE_LOCALE, useValue: 'es-ES' },  { provide: LOCALE_ID, useValue: 'es' } ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
